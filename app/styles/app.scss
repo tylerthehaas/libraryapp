@@ -1,0 +1,13 @@
+@import "bootstrap";
+
+body {
+    padding-top: 20px;
+}
+
+.center {
+    text-align: center;
+
+    #contact-form {
+        display: inline-block;
+    }
+}

@@ -1,0 +1,29 @@
+<div class="jumbotron text-center">
+    <h1>Get in touch!</h1>
+    <h2>We're Listening.</h2>
+
+    <br><br>
+
+    <p class="lead">fill in the info below so we can get a hold of you.</p>
+
+    <div class="form-horizontal form-group form-group-lg row center">
+        <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-6">
+            <div class="form-group">
+                {{input type="email" value=emailAddress class="form-control" placeholder="Please enter your email..." autofocus="autofocus"}}
+            </div>
+            <div class="form-group">
+                {{input type="tel" value=phoneNumber class="form-control" placeholder="Please enter phone number in (999) 999 - 9999 format..."}}
+            </div>
+            <div class="form-group">
+                {{textarea class="form-control" value=userQuestion name="name" rows="10" placeholder="Ask your question here. (Must be at least 5 characters long.)"}}
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" disabled="{{unless isValid 'disabled'}}" {{action 'saveContact'}}>Submit</button>
+        </div>
+    </div>
+
+    {{#if responseMessage}}
+        <div class="alert alert-success">{{responseMessage}}</div>
+    {{/if}}
+
+    <br><br>
+</div>
